@@ -12,12 +12,12 @@ public class UserRegistration {
 	     Scanner sc = new Scanner (System.in);
 	     System.out.println("Enter the password :");
 	     String password = sc.nextLine();
-	     String pattern ="^[A-Za-z0-9-]{8,}$";
+	     String pattern ="^(?=.*[A-Z])[A-Za-z0-9]{8,}$";
 	     Pattern p = Pattern.compile(pattern);
 	     Matcher m1 = p.matcher(password);
 	     if(m1.matches())
 	     {
-	     	System.out.println("The email ID of the user is: "+password);
+	     	System.out.println("The password of the user with atleat one uppercase is: "+password);
 	     }
 	     else
 	     {
