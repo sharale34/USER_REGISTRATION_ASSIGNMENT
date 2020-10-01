@@ -10,33 +10,22 @@ public class UserRegistration {
 		 // TODO Auto-generated method stub
 		 System.out.println("Welcome To User Registration Program");
 	     Scanner sc = new Scanner (System.in);
-	     System.out.println("Enter the first name :");
-	     String firstName = sc.nextLine();
-	     System.out.println("Enter the last name :");
-	     String lastName = sc.nextLine();
-	     String pattern ="^[A-Z][A-Za-z]{2,}";
+	     System.out.println("Enter the email ID :");
+	     String emailID = sc.nextLine();
+	     String pattern ="^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 	     Pattern p = Pattern.compile(pattern);
-	     Matcher m1 = p.matcher(firstName);
-	     Matcher m2 = p.matcher(lastName);
-	     if(m1.matches() && m2.matches())
+	     Matcher m1 = p.matcher(emailID);
+	     if(m1.matches())
 	     {
-	     	System.out.println("The full name of the user is: "+firstName+" "+lastName);
+	     	System.out.println("The email ID of the user is: "+emailID);
 	     }
 	     else
 	     {
-	    	 if(firstName.length() <= 2)
-		     {
-		     	System.out.println("The first name should have minimum 3 characters");
-		     }
-	    	 else if(lastName.length() <= 2)
-		     {
-		     	System.out.println("The last name should have minimum 3 characters");
-		     }
-	    	 else 
-	    	 {
 	    	 System.out.println("Enter a valid input");
-	    	 }
 	     }
 	}
 
 }
+
+
+
