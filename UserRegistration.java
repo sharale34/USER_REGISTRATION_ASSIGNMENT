@@ -10,14 +10,14 @@ public class UserRegistration {
 		 // TODO Auto-generated method stub
 		 System.out.println("Welcome To User Registration Program");
 	     Scanner sc = new Scanner (System.in);
-	     System.out.println("Enter the password :");
-	     String password = sc.nextLine();
-	     String pattern ="^(?=.*[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])[A-Za-z0-9!@#$%^&*?]{8,}$";
+	     System.out.println("Enter the email ID :");
+	     String emailID = sc.nextLine();
+	     String pattern ="^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 	     Pattern p = Pattern.compile(pattern);
-	     Matcher m1 = p.matcher(password);
+	     Matcher m1 = p.matcher(emailID);
 	     if(m1.matches())
 	     {
-	     	System.out.println("The password of the user with atleat one uppercase is: "+password);
+	     	System.out.println("The Email ID of the user is: "+emailID);
 	     }
 	     else
 	     {
