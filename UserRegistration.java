@@ -10,14 +10,14 @@ public class UserRegistration {
 		 // TODO Auto-generated method stub
 		 System.out.println("Welcome To User Registration Program");
 	     Scanner sc = new Scanner (System.in);
-	     System.out.println("Enter the mobile number :");
-	     String mobileNum = sc.nextLine();
-	     String pattern ="^[9][1]\\s[7-9]{1}[0-9]{9}$";
+	     System.out.println("Enter the password :");
+	     String password = sc.nextLine();
+	     String pattern ="^[A-Za-z0-9-]{8,}$";
 	     Pattern p = Pattern.compile(pattern);
-	     Matcher m1 = p.matcher(mobileNum);
+	     Matcher m1 = p.matcher(password);
 	     if(m1.matches())
 	     {
-	     	System.out.println("The email ID of the user is: "+mobileNum);
+	     	System.out.println("The email ID of the user is: "+password);
 	     }
 	     else
 	     {
