@@ -12,7 +12,7 @@ public class UserRegistration {
 	     Scanner sc = new Scanner (System.in);
 	     System.out.println("Enter the password :");
 	     String password = sc.nextLine();
-	     String pattern ="^(?=.*[A-Z])(?=.*?[0-9])[A-Za-z0-9]{8,}$";
+	     String pattern ="^(?=.*[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])[A-Za-z0-9!@#$%^&*?]{8,}$";
 	     Pattern p = Pattern.compile(pattern);
 	     Matcher m1 = p.matcher(password);
 	     if(m1.matches())
